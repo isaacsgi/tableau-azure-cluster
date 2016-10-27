@@ -2,8 +2,8 @@
 
 ## Overview of the process
 - **Step 1.** Deploy Azure Resource Manager Template to create VMs and Networking.
-- **Step 2.** Login into Primary Server, download and install Tableau Primary Networked Server.
-- **Step 3.** Login into each Worker Server, download and install Tableau Worker Networked Server.
+- **Step 2.** Login to Primary Server, download and install Tableau Primary Networked Server.
+- **Step 3.** Login to each Worker Server, download, install and configure Tableau Worker Networked Server.
 - **Step 4.** Use Tableau Server Configuration on Primary Networked Server to setup and configure Worker Networked Servers.
 
 ###Pre-Requisites
@@ -64,7 +64,7 @@
 License Key
 
 ## Step 2
-### Login into Primary Server, download and install Tableau Primary Networked Server
+### Login to Primary Server, download and install Tableau Primary Networked Server
 
 1. Sign in to the [Azure  portal](https://portal.azure.com).
 2. Navigate to the Resource Group you created
@@ -125,10 +125,41 @@ This process may take several minutes to complete ...
 ![Configuration and Installation](./images/picture21.png "Configuration and Installation")
 
 17. Activate with license key
+![License Key activation](./images/picture22.png "License Key activation")
 
-18. Tableau Server Configuration, 'ok', 'ok', IE launches
-19. Create Server Administrator account, Tableau Administrator page opens
-20. Close IE, 'Finish'
+18. No changes on Tableau Server Configuration.  Click 'ok', then 'ok', then Internet Explorer launches
+![Tableau Server Configuration](./images/picture30.png "Tableau Server Configuration")
+![Tableau Server Configuration](./images/picture30-1.png "Tableau Server Configuration")
+
+19. Create Server Administrator account
+![Create Server Administrator](./images/picture31.png "Create Server Administrator")
+
+Tableau Administrator page opens
+![Create Server Administrator](./images/picture32.png "Create Server Administrator")
+
+20. Close IE, then 'Finish'
+
+##Step 3
+###Login to each Worker Server, download, install and configure Tableau Worker Networked Server
+On Each Worker, follow actions 1 - 14 above, making sure to install the Worker Networked Server.  During the Worker installation, the only Tableau Server Worker software configuration is to supply the IP address of the Primary Networked Server.
+
+Key Screenshots for this Step:
+
+* Make sure you're dowloading latest release of **Tableau Server Worker** version 10.0 (TableauServerWorker-64bit-10-0-2.exe) the Worker
+![Tableau Server Worker](./images/picture24.png "Tableau Server Worker")
+
+* Tableau Server Worker Configuration requires that you supply the Private IP Address of the Primary Networked Server
+![Set Private IP Address](./images/picture31.png "Set Private IP Address")
+
+* The Private IP Adress of the Primary Networked Server can be retrieved from the Network Interface (Nic) of the Primary Networked Server
+![Set Private IP Address](./images/picture26.png "Set Private IP Address")
+
+
+##Step 4
+###Use Tableau Server Configuration on Primary Networked Server to setup and configure Worker Networked Servers
+
+
+
 21. Add Server Directory to System Environmental Path
     a.  Right-click on 'This PC'
     b.  Properties
