@@ -149,7 +149,7 @@ Key Screenshots for this Step:
 ![Tableau Server Worker](./images/picture24.png "Tableau Server Worker")
 
 * Tableau Server Worker Configuration requires that you supply the Private IP Address of the Primary Networked Server
-![Set Private IP Address](./images/picture31.png "Set Private IP Address")
+![Set Private IP Address](./images/picture25.png "Set Private IP Address")
 
 * The Private IP Adress of the Primary Networked Server can be retrieved from the Network Interface (Nic) of the Primary Networked Server
 ![Set Private IP Address](./images/picture26.png "Set Private IP Address")
