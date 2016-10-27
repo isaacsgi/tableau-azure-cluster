@@ -6,13 +6,14 @@
 - **Step 3.** Login into each Worker Server, download and install Tableau Worker Networked Server.
 - **Step 4.** Use Tableau Server Configuration on Primary Networked Server to setup and configure Worker Networked Servers.
 
-##Pre-Requisites
+###Pre-Requisites
 - If you don't have an Azure account, you can create one [here] (https://azure.microsoft.com/en-us/free/)
 - Edit the Azure Resource Manager (ARM) Template (azuredeploy.json) and/or ARM Template Parameters (azuredeploy.parameters.json) to customize any values you would like to change.  
 - **Note:** minimum recommended VM Size is DS13.
 - For more on deploying ARM Templates, see [here] (https://azure.microsoft.com/en-us/documentation/articles/resource-group-template-deploy/)
 
-## Azure CLI Commands 
+## Step 1
+### Deploy Azure Resource Manager Template to create VMs and Networking
 
     Azure login
 
