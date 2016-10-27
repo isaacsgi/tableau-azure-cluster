@@ -77,39 +77,59 @@ License Key
     (Say 'yes' to finding PCs, devices and content on this network)
  ![Accessing Server Manager](./images/picture3.png "Accessing Server Manager")
 
-3.  Turn off IE Enhanced Security Configuration
+5.  Turn off IE Enhanced Security Configuration
  ![IE Enhanced Security Configuration](./images/picture4.png "IE Enhanced Security Configuration")
 
-4.  Turn off Windows Firewall (Private and Public)
+6.  Turn off Windows Firewall (Private and Public)
 ![Local Server - Firewall](./images/picture27.png "Local Server - Firewall")
 ![Firewall Settings](./images/picture28.png "Firewall Settings")
 
-5.  Open Internet Explorer - Use recommended security, privacy, and compatibility settings
+7.  Open Internet Explorer - Use recommended security, privacy, and compatibility settings
 ![Launch Internet Explorer](./images/picture5.png "Launch Internet Explorer")
 
-6.  Navigate to [Tableau Alternate Downloads Site](http://www.tableau.com/support/esdalt)
+8.  Navigate to [Tableau Alternate Downloads Site](http://www.tableau.com/support/esdalt)
 ![Tableau alternate downloads site](./images/picture7.png "Tableau alternate downloads site")
 
-7.  Download Primary Networked Server: latest release of Tableau Server version 10.0 (TableauServer-64bit-10-0-2.exe)
+9.  Download Primary Networked Server: latest release of Tableau Server version 10.0 (TableauServer-64bit-10-0-2.exe)
 ![Tableau Primary Networked Server download](./images/picture8.png "Tableau Primary Networked Server download")
 
-8.  Locate 'TableauServer-64bit-10-0-2.exe' on drive, double-click to initiate install, select 'Run', 'Next'
+10.  Locate 'TableauServer-64bit-10-0-2.exe' on drive, double-click to initiate install, select 'Run', 'Next'
 ![Download location](./images/picture9.png "Download location")
 ![Run Install](./images/picture10.png "Run Install")
 
-9.  Change install location to striped drive [TableauData (F:)], 'ok', then 'Next'
-![Change install location](./images/picture10.png "Change install location")
+11.  Change install location to striped drive [TableauData (F:)], 'ok', then 'Next'
+![Change install location](./images/picture11.png "Change install location")
+![Change install location](./images/picture12.png "Change install location")
+![Change install location](./images/picture13.png "Change install location")
 
+12. Installing ...
+![Installing ...](./images/picture14.png "Installing ...")
 
-10. System Verification
-11. Accept License Agreement
-12. Default Start Menu Group, 'Next'
-13. Configuration and Initialization, 'Next'
-14. Activate with license key
-15. Tableau Server Configuration, 'ok', 'ok', IE launches
-16. Create Server Administrator account, Tableau Administrator page opens
-17. Close IE, 'Finish'
-18. Add Server Directory to System Environmental Path
+13. System Verification, then 'Next'
+![System Verification](./images/picture15.png "System Verification")
+
+14. Accept End User License Agreement, then 'Next'
+![Accept EULA](./images/picture16.png "Accept EULA")
+
+15. Accept default Start Menu folder, then'Next'
+![Default Start Menu Folder](./images/picture17.png "Default Start Menu Folder")
+ 
+ then 'Install'
+![Ready to Install](./images/picture18.png "Ready to Install")
+![Installing ...](./images/picture19.png "Installing ...")
+
+16. Configuration and Initialization, then 'Next'
+![Configuration and Installation](./images/picture20.png "Configuration and Installation")
+
+This process may take several minutes to complete ...
+![Configuration and Installation](./images/picture21.png "Configuration and Installation")
+
+17. Activate with license key
+
+18. Tableau Server Configuration, 'ok', 'ok', IE launches
+19. Create Server Administrator account, Tableau Administrator page opens
+20. Close IE, 'Finish'
+21. Add Server Directory to System Environmental Path
     a.  Right-click on 'This PC'
     b.  Properties
     c.  'Advanced system settings'
