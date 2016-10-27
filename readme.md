@@ -14,19 +14,29 @@
 
 ## Step 1
 ### Deploy Azure Resource Manager Template to create VMs and Networking
+**From the Azure CLI, execute the following commands:**
 
+    /* Login to your Azure account
     Azure login
 
+    /* List the accounts you have access to
     azure account list
 
+    /* If your preferred subscription isn't set to default, use this command to set the right one
+    azure account set <YourSubscriptionNameOrId>
+
+    /* You can name your Resource Group however you prefer
+    /* Choose the region of your preference
     azure group create -n azrtableaug -l "East US"
 
+    /* Validate your customization of the template and parameters
     azure group template validate -f azuredeploy.json -e "azuredeploy.parameters.json" azrtableaug
 
+    /* Deploy the template
     azure group deployment create -f azuredeploy.json -e "azuredeploy.parameters.json" -g azrtableaug
 
 
-##  Asset List   
+###  Once succesful,  your deployment will report an asset list similar to the following:   
     data:    DeploymentName     : azuredeploy
     data:    ResourceGroupName  : azrtableaug
     data:    ProvisioningState  : Succeeded
@@ -53,7 +63,13 @@
 
 License Key
 
-##Install on Primary Networked Server
+## Step 2
+### Login into Primary Server, download and install Tableau Primary Networked Server
+
+1. Sign in to the [Azure  portal](https://portal.azure.com).
+2. Navigate to the Resource Group you created
+ ![Creating a new cluster in the Azure portal](./images/picture1.png "Resource Group for the Tableau Server cluster")
+
 1.  Connect to Primary Server 
 2.  Server Manager
 3.  Turn off IE Enhanced Security Configuration

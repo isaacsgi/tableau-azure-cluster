@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vmPrefix": {
+      "value": "azrtableau"
+    },
+    "vmSize": {
+      "value": "Standard_DS13"
+    },
+	"dataDiskSize": {
+            "value": "128"
+        },
+    "adminUsername": {
+      "value": "VMAdmin"
+    },
+    "adminPassword": {
+      "value": "P@ssword12345$"
+    },
+    "location": {
+      "value": "East US"
+    },
+	"newStorageAccountName": {
+		"value": "azrtabstg"
+	},
+    "imagePublisher": {
+      "value": "MicrosoftWindowsServer"
+    },
+    "imageOffer": {
+      "value": "WindowsServer"
+    },
+    "imageSKU": {
+      "value": "2012-R2-Datacenter"
+    }
+  }
+}
