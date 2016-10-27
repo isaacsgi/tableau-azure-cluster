@@ -68,18 +68,39 @@ License Key
 
 1. Sign in to the [Azure  portal](https://portal.azure.com).
 2. Navigate to the Resource Group you created
- ![Creating a new cluster in the Azure portal](./images/picture1.png "Resource Group for the Tableau Server cluster")
+ ![Resource Group for the Tableau Server cluster](./images/picture1.png "Resource Group for the Tableau Server cluster")
 
-1.  Connect to Primary Server 
-2.  Server Manager
+3.  Connect to Primary Server via Remote Desktop
+ ![Connecting / Logging into Primary](./images/picture2.png "Connecting / Logging into Primary")
+
+4.  Select 'Local Server' on Server Manager
+    (Say 'yes' to finding PCs, devices and content on this network)
+ ![Accessing Server Manager](./images/picture3.png "Accessing Server Manager")
+
 3.  Turn off IE Enhanced Security Configuration
-4.  Turn off Firewall (Private and Public)
-5.  Open IE
-Use recommended security, privacy, and compatibility settings
-6.  Go to http://www.tableau.com/support/esdalt
-7.  Download latest release of version 10.0 (TableauServer-64bit-10-0-2.exe)
-8.  Locate on drive, double-click to initial install, select 'Run', 'Next'
+ ![IE Enhanced Security Configuration](./images/picture4.png "IE Enhanced Security Configuration")
+
+4.  Turn off Windows Firewall (Private and Public)
+![Local Server - Firewall](./images/picture27.png "Local Server - Firewall")
+![Firewall Settings](./images/picture28.png "Firewall Settings")
+
+5.  Open Internet Explorer - Use recommended security, privacy, and compatibility settings
+![Launch Internet Explorer](./images/picture5.png "Launch Internet Explorer")
+
+6.  Navigate to [Tableau Alternate Downloads Site](http://www.tableau.com/support/esdalt)
+![Tableau alternate downloads site](./images/picture7.png "Tableau alternate downloads site")
+
+7.  Download Primary Networked Server: latest release of Tableau Server version 10.0 (TableauServer-64bit-10-0-2.exe)
+![Tableau Primary Networked Server download](./images/picture8.png "Tableau Primary Networked Server download")
+
+8.  Locate 'TableauServer-64bit-10-0-2.exe' on drive, double-click to initiate install, select 'Run', 'Next'
+![Download location](./images/picture9.png "Download location")
+![Run Install](./images/picture10.png "Run Install")
+
 9.  Change install location to striped drive [TableauData (F:)], 'ok', then 'Next'
+![Change install location](./images/picture10.png "Change install location")
+
+
 10. System Verification
 11. Accept License Agreement
 12. Default Start Menu Group, 'Next'
