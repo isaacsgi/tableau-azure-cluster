@@ -68,7 +68,7 @@ License Key
 
 1. Sign in to the [Azure  portal](https://portal.azure.com).
 2. Navigate to the Resource Group you created
- ![Resource Group for the Tableau Server cluster](./images/picture1.png "Resource Group for the Tableau Server cluster")
+ ![Resource Group for the Tableau Server cluster](./images/picture1-1.png "Resource Group for the Tableau Server cluster")
 
 3.  Connect to Primary Server via Remote Desktop
  ![Connecting / Logging into Primary](./images/picture2.png "Connecting / Logging into Primary")
@@ -157,6 +157,15 @@ Key Screenshots for this Step:
 
 ##Step 4
 ###Use Tableau Server Configuration on Primary Networked Server to setup and configure Worker Networked Servers
+
+###Step 4 Overview
+- **Step 4.1.** Set Windows Environment 
+- **Step 4.2.** Stop Tableau Admin Server
+- **Step 4.3.** Launch Tableau Server Configuration
+- **Step 4.4.** Add Worker Networked Servers to the Configuration
+- **Step 4.5.** Primary Networked Server pushes configurations to Worker Networked Servers
+- **Step 4.6.** Access your Tableau portal
+
 ###Configuration Pre-Requisite: Set 'hosts' files to see other servers
 The Hostnames and Private IP Adresses must be set in the Windows hosts files so each server can see the others as follows:
 * The Primary's Hostnames and Private IP Adress should be set in each file.
@@ -203,7 +212,7 @@ The hosts file can be found in this directory on each machine:   **`c:\Windows\S
  ![Windows Key](./images/picture43.png "Windows Key")
 
  Down Arrow to 'Apps'
- !Down Arrow to 'Apps'](./images/picture43.png "Down Arrow to 'Apps'")
+ ![Down Arrow to 'Apps'](./images/picture43.png "Down Arrow to 'Apps'")
 
  Select Configure Tableau Server
  ![Configure Tableau Server](./images/picture40.png "Configure Tableau Server")
