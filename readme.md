@@ -182,14 +182,11 @@ The hosts file can be found in this directory on each machine:   **`c:\Windows\S
  'Environment Variables...'
  ![Environment Variables...](./images/picture36.png "Environment Variables...")
 
- 'System variable', select 'Path', 'Edit...'
+ 'System variable', Select 'Path', 'Edit...'
+ ![Set Path System Variable](./images/picture46.png "Set Path System Variable")
+
+ At end of Variable value field, add `;f:\Tableau Server\bin`, then 'ok', 'ok', 'ok'
  ![Set Path System Variable](./images/picture38.png "Set Path System Variable")
-
- At end of Variable value field, add `;f:\Tableau Server\bin`
- ![Set Path System Variable](./images/picture26.png "Set Path System Variable")
-
- 'ok', 'ok', 'ok'
- ![Set Path System Variable](./images/picture26.png "Set Path System Variable")
 
 2. Stop Tableau Server
  Windows Key + 'x'
@@ -206,7 +203,7 @@ The hosts file can be found in this directory on each machine:   **`c:\Windows\S
  ![Windows Key](./images/picture43.png "Windows Key")
 
  Down Arrow to 'Apps'
- !Down Arrow to 'Apps'](./images/picture40.png "Down Arrow to 'Apps'")
+ !Down Arrow to 'Apps'](./images/picture43.png "Down Arrow to 'Apps'")
 
  Select Configure Tableau Server
  ![Configure Tableau Server](./images/picture40.png "Configure Tableau Server")
@@ -214,15 +211,3 @@ The hosts file can be found in this directory on each machine:   **`c:\Windows\S
  Tableau Server Configuration launches
  ![Configure Tableau Server](./images/picture41.png "Configure Tableau Server")
 
-23.  
-
-
-
-
-
-
-Install
-
-Primary Networked Server
-
-Worker Networked Server
