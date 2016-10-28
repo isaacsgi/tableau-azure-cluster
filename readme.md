@@ -93,11 +93,11 @@ License Key
 9.  Download Primary Networked Server: latest release of Tableau Server version 10.0 (TableauServer-64bit-10-0-2.exe)
 ![Tableau Primary Networked Server download](./images/picture8.png "Tableau Primary Networked Server download")
 
-10.  Locate 'TableauServer-64bit-10-0-2.exe' on drive, double-click to initiate install, select 'Run', 'Next'
+10.  Locate 'TableauServer-64bit-10-0-2.exe' on drive, double-click to initiate install, select 'Run', then 'Next'
 ![Download location](./images/picture9.png "Download location")
 ![Run Install](./images/picture10.png "Run Install")
 
-11.  Change install location to striped drive [TableauData (F:)], 'ok', then 'Next'
+11.  Select 'Browse' to change install location to striped drive [TableauData (F:)], then 'ok', then 'Next'
 ![Change install location](./images/picture11.png "Change install location")
 ![Change install location](./images/picture12.png "Change install location")
 ![Change install location](./images/picture13.png "Change install location")
@@ -137,7 +137,8 @@ License Key
  Tableau Administrator page opens
 ![Create Server Administrator](./images/picture32.png "Create Server Administrator")
 
-20. Close IE, then 'Finish'
+20. Close Internet Exporer, then 'Finish' Tableau Server Setup Wizard
+![Finish](./images/picture47.png "Finish")
 
 ##Step 3
 ###Login to each Worker Server, download, install and configure Tableau Worker Networked Server
@@ -179,13 +180,10 @@ The hosts file can be found in this directory on each machine:   **`c:\Windows\S
 ###Tableau Server Configuration on Primary Networked Server
 
 1. Add Server Directory to System Environmental Path
- Right-click on 'This PC'
+ Right-click on 'This PC', select 'Properties'
  ![Right-click on 'This PC'](./images/picture44.png "Right-click on 'This PC'")
 
- System properties
- ![System properties](./images/picture35.png "System properties")
-
- 'Advanced system settings'
+ System properties, 'Advanced system settings'
  ![Advanced system settings](./images/picture35.png "Advanced system settings")
 
  'Environment Variables...'
