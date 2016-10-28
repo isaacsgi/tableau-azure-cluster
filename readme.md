@@ -167,20 +167,53 @@ See sample hosts files in ./scripts directory of this project.
 
 The hosts file can be found in this directory on each machine:   **`c:\Windows\System32\drivers\etc\`**
 
+###Tableau Server Configuration on Primary Networked Server
 
+1. Add Server Directory to System Environmental Path
+ Right-click on 'This PC'
+ ![Right-click on 'This PC'](./images/picture44.png "Right-click on 'This PC'")
 
-21. Add Server Directory to System Environmental Path
-    a.  Right-click on 'This PC'
-    b.  Properties
-    c.  'Advanced system settings'
-    d.  'Environment Variables...'
-    e.  'System variable', select 'Path', 'Edit...'
-    f.  at end of Variable value field, add ;f:\Tableau Server\bin    
-    g.  'ok', 'ok', 'ok'
-19. Windows Key + 'x'
-20. Command Prompt (Admin)
-21. Tabadmin stop
-22. Windows Key, Down Arrow to 'Apps', Configure Tableau Server
+ System properties
+ ![System properties](./images/picture35.png "System properties")
+
+ 'Advanced system settings'
+ ![Advanced system settings](./images/picture35.png "Advanced system settings")
+
+ 'Environment Variables...'
+ ![Environment Variables...](./images/picture36.png "Environment Variables...")
+
+ 'System variable', select 'Path', 'Edit...'
+ ![Set Path System Variable](./images/picture38.png "Set Path System Variable")
+
+ At end of Variable value field, add `;f:\Tableau Server\bin`
+ ![Set Path System Variable](./images/picture26.png "Set Path System Variable")
+
+ 'ok', 'ok', 'ok'
+ ![Set Path System Variable](./images/picture26.png "Set Path System Variable")
+
+2. Stop Tableau Server
+ Windows Key + 'x'
+ ![Windows Key + 'x'](./images/picture39.png "Windows Key + 'x'")
+
+ Command Prompt (Admin)
+ ![Command Prompt (Admin)](./images/picture39.png "Command Prompt (Admin)")
+
+ Enter 'Tabadmin stop' 
+ ![Enter 'Tabadmin stop'](./images/picture45.png "Enter 'Tabadmin stop'")
+
+3. While waiting for Tableau Server to stop, launch Tableau Server Configuration 
+ Windows Key
+ ![Windows Key](./images/picture43.png "Windows Key")
+
+ Down Arrow to 'Apps'
+ !Down Arrow to 'Apps'](./images/picture40.png "Down Arrow to 'Apps'")
+
+ Select Configure Tableau Server
+ ![Configure Tableau Server](./images/picture40.png "Configure Tableau Server")
+ 
+ Tableau Server Configuration launches
+ ![Configure Tableau Server](./images/picture41.png "Configure Tableau Server")
+
 23.  
 
 
