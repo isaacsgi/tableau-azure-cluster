@@ -165,8 +165,7 @@ The Hostnames and Private IP Adresses must be set in the Windows hosts files so 
 
 See sample hosts files in ./scripts directory of this project.
 
-The hosts file can be found in this directory on each machine: 
-    **c:\Windows\System32\drivers\etc\**
+The hosts file can be found in this directory on each machine:   **`c:\Windows\System32\drivers\etc\`**
 
 
 
