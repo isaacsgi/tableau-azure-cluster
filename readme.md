@@ -121,7 +121,7 @@ License Key
 16. Configuration and Initialization, then 'Next'
 ![Configuration and Installation](./images/picture20.png "Configuration and Installation")
 
-This process may take several minutes to complete ...
+ This process may take several minutes to complete ...
 ![Configuration and Installation](./images/picture21.png "Configuration and Installation")
 
 17. Activate with license key
@@ -134,7 +134,7 @@ This process may take several minutes to complete ...
 19. Create Server Administrator account
 ![Create Server Administrator](./images/picture31.png "Create Server Administrator")
 
-Tableau Administrator page opens
+ Tableau Administrator page opens
 ![Create Server Administrator](./images/picture32.png "Create Server Administrator")
 
 20. Close IE, then 'Finish'
