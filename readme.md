@@ -159,12 +159,13 @@ Key Screenshots for this Step:
 ###Use Tableau Server Configuration on Primary Networked Server to setup and configure Worker Networked Servers
 ###Configuration Pre-Requisite: Set 'hosts' files to see other servers
 The Hostnames and Private IP Adresses must be set in the Windows hosts files so each server can see the others as follows:
-- The Primary's Hostnames and Private IP Adress should be set in each file.
-- The Primary should have the Hostname and Private IP Address of each Worker.
-- Each Worker should have the Hostname and Private IP Adress of the Primary **AND the other Worker**.
+* The Primary's Hostnames and Private IP Adress should be set in each file.
+* The **Primary** should have the Hostname and Private IP Address of each Worker.
+* Each **Worker** should have the Hostname and Private IP Adress of the Primary **AND the other Worker.**
 
-See sample hosts files in ./scripts directory of this project.  
-    The hosts file can be found in this directory on each machine: 
+See sample hosts files in ./scripts directory of this project.
+
+The hosts file can be found in this directory on each machine: 
     **c:\Windows\System32\drivers\etc\**
 
 
