@@ -218,24 +218,25 @@ The hosts file can be found in this directory on each machine:   **`c:\Windows\S
 
 ###4.3. Add (2x) Worker Networked Servers to the Configuration
 
- Select 'Servers' Tab
- ![Tableau Servers Tab](./images/picture48.png "Tableau Servers Tab")
+  Select 'Servers' Tab
+  ![Tableau Servers Tab](./images/picture48.png "Tableau Servers Tab")
 
- Click on 'Add...'
- ![Click on 'Add...'](./images/picture49.png "Click on 'Add...'")
+  Click on 'Add...'
+  ![Click on 'Add...'](./images/picture49.png "Click on 'Add...'")
 
- Settings as follows:
- - Use the Private IP Address (as in Step 4 Pre-Requisite) to identify a Worker Server VM
- - VizSQL Server: 2
- - Application Server: 1
- - Backgrounder: 1
- - Cache Server: 2
- - Data Server: 2
- - Data Engine: 1
- - ***Repository: ONLY Check for first Worker Networked Server**
- - Gateway: Check
- - Search & Browse: Check
- ![Worker Server Settings](./images/picture42.png "Worker Server Settings")
+  Settings as follows:
+  - Use the Private IP Address (as in Step 4 Pre-Requisite) to identify a Worker Server VM
+  - VizSQL Server: 2
+  - Application Server: 1
+  - Backgrounder: 1
+  - Cache Server: 2
+  - Data Server: 2
+  - Data Engine: 1
+  - **Repository: ONLY Check for first Worker Networked Server**
+  - Gateway: Check
+  - Search & Browse: Check
+
+  ![Worker Server Settings](./images/picture42.png "Worker Server Settings")
 
  After adding BOTH Worker Networked Servers, your Tableau Server Configuration will look like the following:
  ![Tableau Server Configuration](./images/picture50.png "Tableau Server Configuration")
@@ -244,16 +245,16 @@ The hosts file can be found in this directory on each machine:   **`c:\Windows\S
 
  Click 'ok', then Tableau Server Configuration will update the Workers.  This can take 10 - 15 minutes.
 
-There will be notification messages for each step as follows:
-- Build admin Installer bundle
-- Send admin bundle
-- Upgrade administrative server on Worker
-- Restart administrative server on Worker
-- Build software installer bundle for workers
-- Send software bundle to Worker
-- Wait for Worker to finish installing
-- Configure Workers
-- Rebuild search index
+ There will be notification messages for each step as follows:
+ - Build admin Installer bundle
+ - Send admin bundle
+ - Upgrade administrative server on Worker
+ - Restart administrative server on Worker
+ - Build software installer bundle for workers
+ - Send software bundle to Worker
+ - Wait for Worker to finish installing
+ - Configure Workers
+ - Rebuild search index
 
  NOTE - you may need to move the Tableau Server Configuration windows to see the notifications that will look like this:
  ![Server Configuration Messages](./images/picture51.png "Server Configuration Messages")
