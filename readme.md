@@ -134,6 +134,8 @@ License Key
 ![Tableau Server Configuration](./images/picture30-1.png "Tableau Server Configuration")
 
 19. Create Server Administrator account
+
+Create your login and **make sure to save this information**
 ![Create Server Administrator](./images/picture31.png "Create Server Administrator")
 
  Tableau Administrator page opens
@@ -181,7 +183,7 @@ The hosts file can be found in this directory on each machine:   **`c:\Windows\S
 
 ###Tableau Server Configuration on Primary Networked Server
 
-###4.1. Add Server Directory to System Environmental Path
+###4.1. Add Server installation Directory to System Environmental Path
 
  Right-click on 'This PC', select 'Properties'
  ![Right-click on 'This PC'](./images/picture44.png "Right-click on 'This PC'")
@@ -260,3 +262,14 @@ The hosts file can be found in this directory on each machine:   **`c:\Windows\S
  ![Server Configuration Messages](./images/picture51.png "Server Configuration Messages")
  
  In an Admin Command Window, type `Tabadmin Start`
+
+###4.6. Access your Tableau portal
+
+  Go to portal.azure.com and select the Primary Server, and copy the Public IP Address/DNS name label value
+  ![Copy IP Address/DNS](./images/picture52.png "Copy IP Address/DNS")
+
+  Open a browser and past the value, but remove the IP Address.  Navigate to the Tableau Admin Login
+  ![Tableau Admin Login](./images/picture53.png "Tableau Admin Login")
+
+  If you have remembered your login correctly **(Step 2.19 above)**, you will now have access to the Tableau Portal 
+  ![Tableau Portal](./images/picture54.png "Tableau Portal")
