@@ -1,5 +1,7 @@
 #Creating a Tableau Server Cluster on Azure
 
+This is a detailed guide for creating a Tableau cluster on Microsoft's Azure cloud.  For more information about running Tableau Server in a distributed environment, please see [here] (http://onlinehelp.tableau.com/current/server/en-us/help.htm#qs_distributed_server.html)
+
 ## Overview of the process
 - **Step 1.** Deploy Azure Resource Manager Template to create VMs and Networking.
 - **Step 2.** Login to Primary Server, download and install Tableau Primary Networked Server.
@@ -160,7 +162,7 @@ Key Screenshots for this Step:
 ###Use Tableau Server Configuration on Primary Networked Server to setup and configure Worker Networked Servers
 
 ###Step 4 Overview
-- **Step 4.1.** Set Windows Environment 
+- **Step 4.1.** Add Server Directory to System Environmental Path 
 - **Step 4.2.** Stop Tableau Admin Server
 - **Step 4.3.** Launch Tableau Server Configuration
 - **Step 4.4.** Add Worker Networked Servers to the Configuration
@@ -179,7 +181,8 @@ The hosts file can be found in this directory on each machine:   **`c:\Windows\S
 
 ###Tableau Server Configuration on Primary Networked Server
 
-1. Add Server Directory to System Environmental Path
+4.1. Add Server Directory to System Environmental Path
+
  Right-click on 'This PC', select 'Properties'
  ![Right-click on 'This PC'](./images/picture44.png "Right-click on 'This PC'")
 
@@ -189,27 +192,22 @@ The hosts file can be found in this directory on each machine:   **`c:\Windows\S
  'Environment Variables...'
  ![Environment Variables...](./images/picture36.png "Environment Variables...")
 
- 'System variable', Select 'Path', 'Edit...'
+ 'System variables', Select 'Path', then 'Edit...'
  ![Set Path System Variable](./images/picture46.png "Set Path System Variable")
 
- At end of Variable value field, add `;f:\Tableau Server\bin`, then 'ok', 'ok', 'ok'
+ At end of 'Variable value' field, add `;f:\Tableau Server\bin`, then 'ok', 'ok', 'ok'
  ![Set Path System Variable](./images/picture38.png "Set Path System Variable")
 
-2. Stop Tableau Server
- Windows Key + 'x'
- ![Windows Key + 'x'](./images/picture39.png "Windows Key + 'x'")
-
- Command Prompt (Admin)
+4.2. Stop Tableau Admin Server
+ Windows Key + 'x',  Command Prompt (Admin)
  ![Command Prompt (Admin)](./images/picture39.png "Command Prompt (Admin)")
 
  Enter 'Tabadmin stop' 
  ![Enter 'Tabadmin stop'](./images/picture45.png "Enter 'Tabadmin stop'")
 
-3. While waiting for Tableau Server to stop, launch Tableau Server Configuration 
- Windows Key
- ![Windows Key](./images/picture43.png "Windows Key")
+4.3. Launch Tableau Server Configuration
 
- Down Arrow to 'Apps'
+ While waiting for Tableau Server to stop, hit Windows Key, Click on Down Arrow to 'Apps'
  ![Down Arrow to 'Apps'](./images/picture43.png "Down Arrow to 'Apps'")
 
  Select Configure Tableau Server
@@ -217,4 +215,25 @@ The hosts file can be found in this directory on each machine:   **`c:\Windows\S
  
  Tableau Server Configuration launches
  ![Configure Tableau Server](./images/picture41.png "Configure Tableau Server")
+
+4.3. Add 2 Worker Networked Servers to the Configuration
+
+ Select 'Servers' Tab
+ ![Tableau Servers Tab](./images/picture48.png "Tableau Servers Tab")
+
+ Click on 'Add...'
+ ![Click on 'Add...'](./images/picture49.png "Click on 'Add...'")
+
+ Settings as follows:
+ - Use the Private IP Address (as in Step 4 Pre-Requisite) to identify a Worker Server VM
+ - VizSQL Server: 2
+ - Application Server: 1
+ - Backgrounder: 1
+ - Cache Server: 2
+ - Data Server: 2
+ - Data Engine: 1
+ - Repository: **ONLY Check for first Worker Networked Server**
+ - Gateway: Check
+ - Search & Browse: Check
+ ![Worker Server Settings](./images/picture42.png "Worker Server Settings")
 
