@@ -181,7 +181,7 @@ The hosts file can be found in this directory on each machine:   **`c:\Windows\S
 
 ###Tableau Server Configuration on Primary Networked Server
 
-4.1. Add Server Directory to System Environmental Path
+###4.1. Add Server Directory to System Environmental Path
 
  Right-click on 'This PC', select 'Properties'
  ![Right-click on 'This PC'](./images/picture44.png "Right-click on 'This PC'")
@@ -198,14 +198,14 @@ The hosts file can be found in this directory on each machine:   **`c:\Windows\S
  At end of 'Variable value' field, add `;f:\Tableau Server\bin`, then 'ok', 'ok', 'ok'
  ![Set Path System Variable](./images/picture38.png "Set Path System Variable")
 
-4.2. Stop Tableau Admin Server
+###4.2. Stop Tableau Admin Server
  Windows Key + 'x',  Command Prompt (Admin)
  ![Command Prompt (Admin)](./images/picture39.png "Command Prompt (Admin)")
 
  Enter 'Tabadmin stop' 
  ![Enter 'Tabadmin stop'](./images/picture45.png "Enter 'Tabadmin stop'")
 
-4.3. Launch Tableau Server Configuration
+###4.3. Launch Tableau Server Configuration
 
  While waiting for Tableau Server to stop, hit Windows Key, Click on Down Arrow to 'Apps'
  ![Down Arrow to 'Apps'](./images/picture43.png "Down Arrow to 'Apps'")
@@ -216,7 +216,7 @@ The hosts file can be found in this directory on each machine:   **`c:\Windows\S
  Tableau Server Configuration launches
  ![Configure Tableau Server](./images/picture41.png "Configure Tableau Server")
 
-4.3. Add 2 Worker Networked Servers to the Configuration
+###4.3. Add (2x) Worker Networked Servers to the Configuration
 
  Select 'Servers' Tab
  ![Tableau Servers Tab](./images/picture48.png "Tableau Servers Tab")
@@ -232,8 +232,30 @@ The hosts file can be found in this directory on each machine:   **`c:\Windows\S
  - Cache Server: 2
  - Data Server: 2
  - Data Engine: 1
- - Repository: **ONLY Check for first Worker Networked Server**
+ - ***Repository: ONLY Check for first Worker Networked Server**
  - Gateway: Check
  - Search & Browse: Check
  ![Worker Server Settings](./images/picture42.png "Worker Server Settings")
 
+ After adding BOTH Worker Networked Servers, your Tableau Server Configuration will look like the following:
+ ![Tableau Server Configuration](./images/picture50.png "Tableau Server Configuration")
+
+###4.5. Primary Networked Server pushes configurations to Worker Networked Servers
+
+ Click 'ok', then Tableau Server Configuration will update the Workers.  This can take 10 - 15 minutes.
+
+There will be notification messages for each step as follows:
+- Build admin Installer bundle
+- Send admin bundle
+- Upgrade administrative server on Worker
+- Restart administrative server on Worker
+- Build software installer bundle for workers
+- Send software bundle to Worker
+- Wait for Worker to finish installing
+- Configure Workers
+- Rebuild search index
+
+ NOTE - you may need to move the Tableau Server Configuration windows to see the notifications that will look like this:
+ ![Server Configuration Messages](./images/picture51.png "Server Configuration Messages")
+ 
+ In an Admin Command Window, type `Tabadmin Start`
