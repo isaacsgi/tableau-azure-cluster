@@ -9,14 +9,37 @@ This is a detailed guide for creating a Tableau cluster on Microsoft's Azure clo
 - **Step 4.** Use Tableau Server Configuration on Primary Networked Server to setup and configure Worker Networked Servers.
 
 ###Pre-Requisites
-- If you don't have an Azure account, you can create one [here] (https://azure.microsoft.com/en-us/free/)
-- Edit the Azure Resource Manager (ARM) Template (azuredeploy.json) and/or ARM Template Parameters (azuredeploy.parameters.json) to customize any values you would like to change.  
-- **Note:** minimum recommended VM Size is DS13.
-- For more on deploying ARM Templates, see [here] (https://azure.microsoft.com/en-us/documentation/articles/resource-group-template-deploy/)
+1. If you don't have an Azure account, you can create one [here] (https://azure.microsoft.com/en-us/free/)
+2. Install either:
+[Azure PowerShell cmdlets on Windows] (https://docs.microsoft.com/en-us/powershell/azureps-cmdlets-docs/); OR
+[The Azure Cross-Platform CLI] (https://docs.microsoft.com/en-us/azure/xplat-cli-install)
+3. Edit the Azure Resource Manager (ARM) Template (azuredeploy.json) and/or ARM Template Parameters (azuredeploy.parameters.json) to customize any values you would like to change.  
+* ***Note:** minimum recommended VM Size is DS13.
+* For more on deploying ARM Templates, see [here] (https://azure.microsoft.com/en-us/documentation/articles/resource-group-template-deploy/)
 
 ## Step 1
 ### Deploy Azure Resource Manager Template to create VMs and Networking
-**You have the choice to use Azure PowerShell cmdlets on Windows OR the Azure CLI on any platform
+**From PowerShell, execute the following commands:**
+
+    /* Login to your Azure account
+    Add-AzureRmAccount
+
+    /* List the Subscriptions you have access to
+    Get-AzureRmSubscription
+
+    /* If your preferred subscription isn't set to default, use this command to set the right one
+    Set-AzureRmContext -SubscriptionName <YourSubscriptionName>
+
+    /* You can **name your Resource Group** however you prefer
+    /* Choose the **region of your preference**
+    New-AzureRmResourceGroup -Name azrtableaupsg -Location "East US"
+
+    /* Validate your customization of the template and parameters
+    Test-AzureRmResourceGroupDeployment -ResourceGroupName azrtableaupsg -Template File azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json -Verbose
+
+    /* Deploy the template
+    New-AzureRmResourceGroupDeployment -ResourceGroupName azrtableaupsg -Template File azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json -Verbose
+
 **From the Azure CLI, execute the following commands:**
 
     /* Login to your Azure account
