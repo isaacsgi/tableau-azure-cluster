@@ -19,7 +19,8 @@ This is a detailed guide for creating a Tableau cluster on Microsoft's Azure clo
 
 ## Step 1
 ### Deploy Azure Resource Manager Template to create VMs and Networking
-**From PowerShell, execute the following commands:**
+
+**If you're using PowerShell, execute the following commands:**
 
     /* Login to your Azure account
     Add-AzureRmAccount
@@ -43,7 +44,7 @@ This is a detailed guide for creating a Tableau cluster on Microsoft's Azure clo
 
 ###  Once succesful,  your deployment will report an asset list similar to the following:       
     DeploymentName          : azuredeploy
-    ResourceGroupName       : azrtableaupsg
+    ResourceGroupName       : azrtableaugx
     ProvisioningState       : Succeeded
     Timestamp               : 2/14/2017 5:33:34 PM
     Mode                    : Incremental
@@ -67,7 +68,7 @@ This is a detailed guide for creating a Tableau cluster on Microsoft's Azure clo
     Outputs                 :
     DeploymentDebugLogLevel :
 
-**From the Azure CLI, execute the following commands:**
+** If you're using the Azure CLI, execute the following commands:**
 
     /* Login to your Azure account
     Azure login
@@ -113,8 +114,9 @@ This is a detailed guide for creating a Tableau cluster on Microsoft's Azure clo
     data:    initScript             String        stripedrives.ps1
     info:    group deployment create command OK
 
-
-License Key
+### For both methods, you can check the progress and final status of the deployment in the [Azure  portal] (https://portal.azure.com)
+1. Select Resource Groups, then the Resource Group you created, then select "Deploying"
+![Navigate to the Resource Group you created while it is still deploying](./images/picture59.png "Navigate to the Resource Group you created while it is still deploying")
 
 ## Step 2
 ### Login to Primary Server, download and install Tableau Primary Networked Server
