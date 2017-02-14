@@ -16,6 +16,7 @@ This is a detailed guide for creating a Tableau cluster on Microsoft's Azure clo
 
 ## Step 1
 ### Deploy Azure Resource Manager Template to create VMs and Networking
+**You have the choice to use Azure PowerShell cmdlets on Windows OR the Azure CLI on any platform
 **From the Azure CLI, execute the following commands:**
 
     /* Login to your Azure account

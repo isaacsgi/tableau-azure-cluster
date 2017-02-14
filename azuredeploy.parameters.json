@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "vmPrefix": {
-      "value": "azrtableau"
+      "value": "azrtableaugx"
     },
     "vmSize": {
       "value": "Standard_DS13"
@@ -21,7 +21,7 @@
       "value": "East US"
     },
 	"newStorageAccountName": {
-		"value": "azrtabstg"
+		"value": "azrtabstgxx"
 	},
     "imagePublisher": {
       "value": "MicrosoftWindowsServer"
