@@ -32,41 +32,40 @@ This is a detailed guide for creating a Tableau cluster on Microsoft's Azure clo
 
     /* You can **name your Resource Group** however you prefer
     /* Choose the **region of your preference**
-    New-AzureRmResourceGroup -Name azrtableaupsg -Location "East US"
+    New-AzureRmResourceGroup -Name azrtableaugx -Location "East US"
 
     /* Validate your customization of the template and parameters
-    Test-AzureRmResourceGroupDeployment -ResourceGroupName azrtableaupsg -Template File azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json -Verbose
+    Test-AzureRmResourceGroupDeployment -ResourceGroupName azrtableaugx -Template File azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json -Verbose
 
     /* Deploy the template
     New-AzureRmResourceGroupDeployment -ResourceGroupName azrtableaupsg -Template File azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json -Verbose
 
 
 ###  Once succesful,  your deployment will report an asset list similar to the following:       
-DeploymentName          : azuredeploy
-ResourceGroupName       : azrtableaupsg
-ProvisioningState       : Succeeded
-Timestamp               : 2/14/2017 5:33:34 PM
-Mode                    : Incremental
-TemplateLink            :
-Parameters              :
-                          Name             Type                       Value
-                          ===============  =========================  ==========
-                          vmPrefix         String                     azrtableaupsg
-                          vmSize           String                     Standard_DS13
-                          dataDiskSize     String                     128
-                          adminUsername    String                     VMAdmin
-                          adminPassword    SecureString
-                          location         String                     East US
-                          newStorageAccountName  String                     azrtabstg0214
-                          imagePublisher   String                     MicrosoftWindowsServer
-                          imageOffer       String                     WindowsServer
-                          imageSKU         String                     2012-R2-Datacenter
-                          initScriptUrl    String
-                          https://isaacsgi.blob.core.windows.net/extensions/stripedrives.ps1
-                          initScript       String                     stripedrives.ps1
+    DeploymentName          : azuredeploy
+    ResourceGroupName       : azrtableaupsg
+    ProvisioningState       : Succeeded
+    Timestamp               : 2/14/2017 5:33:34 PM
+    Mode                    : Incremental
+    TemplateLink            :
+    Parameters              :
+                              Name             Type                       Value
+                              ===============  =========================  ==========
+                              vmPrefix         String                     azrtableaugx
+                              vmSize           String                     Standard_DS13
+                              dataDiskSize     String                     128
+                              adminUsername    String                     VMAdmin
+                              adminPassword    SecureString
+                              location         String                     East US
+                              newStorageAccountName  String               azrtabstgxx
+                              imagePublisher   String                     MicrosoftWindowsServer
+                              imageOffer       String                     WindowsServer
+                              imageSKU         String                     2012-R2-Datacenter
+                              initScriptUrl    String                        https://isaacsgi.blob.core.windows.net/extensions/stripedrives.ps1
+                              initScript       String                     stripedrives.ps1
 
-Outputs                 :
-DeploymentDebugLogLevel :
+    Outputs                 :
+    DeploymentDebugLogLevel :
 
 **From the Azure CLI, execute the following commands:**
 
