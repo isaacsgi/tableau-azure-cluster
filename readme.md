@@ -14,8 +14,8 @@ This is a detailed guide for creating a Tableau cluster on Microsoft's Azure clo
 [Azure PowerShell cmdlets on Windows] (https://docs.microsoft.com/en-us/powershell/azureps-cmdlets-docs/); OR
 [The Azure Cross-Platform CLI] (https://docs.microsoft.com/en-us/azure/xplat-cli-install)
 3. Edit the Azure Resource Manager (ARM) Template (azuredeploy.json) and/or ARM Template Parameters (azuredeploy.parameters.json) to customize any values you would like to change.  
-* ***Note:** minimum recommended VM Size is DS13.
-* For more on deploying ARM Templates, see [here] (https://azure.microsoft.com/en-us/documentation/articles/resource-group-template-deploy/)
+- **Note:** minimum recommended VM Size is DS13.
+- For more on deploying ARM Templates, see [here] (https://azure.microsoft.com/en-us/documentation/articles/resource-group-template-deploy/)
 
 ## Step 1
 ### Deploy Azure Resource Manager Template to create VMs and Networking
@@ -39,6 +39,34 @@ This is a detailed guide for creating a Tableau cluster on Microsoft's Azure clo
 
     /* Deploy the template
     New-AzureRmResourceGroupDeployment -ResourceGroupName azrtableaupsg -Template File azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json -Verbose
+
+
+###  Once succesful,  your deployment will report an asset list similar to the following:       
+DeploymentName          : azuredeploy
+ResourceGroupName       : azrtableaupsg
+ProvisioningState       : Succeeded
+Timestamp               : 2/14/2017 5:33:34 PM
+Mode                    : Incremental
+TemplateLink            :
+Parameters              :
+                          Name             Type                       Value
+                          ===============  =========================  ==========
+                          vmPrefix         String                     azrtableaupsg
+                          vmSize           String                     Standard_DS13
+                          dataDiskSize     String                     128
+                          adminUsername    String                     VMAdmin
+                          adminPassword    SecureString
+                          location         String                     East US
+                          newStorageAccountName  String                     azrtabstg0214
+                          imagePublisher   String                     MicrosoftWindowsServer
+                          imageOffer       String                     WindowsServer
+                          imageSKU         String                     2012-R2-Datacenter
+                          initScriptUrl    String
+                          https://isaacsgi.blob.core.windows.net/extensions/stripedrives.ps1
+                          initScript       String                     stripedrives.ps1
+
+Outputs                 :
+DeploymentDebugLogLevel :
 
 **From the Azure CLI, execute the following commands:**
 
