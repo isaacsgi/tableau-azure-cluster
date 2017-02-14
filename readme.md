@@ -118,6 +118,19 @@ This is a detailed guide for creating a Tableau cluster on Microsoft's Azure clo
 1. Select Resource Groups, then the Resource Group you created, then select "Deploying"
 ![Navigate to the Resource Group you created while it is still deploying](./images/picture55.png "Navigate to the Resource Group you created while it is still deploying")
 
+2. Select the Deployment Name
+![Navigate to the Resource Group you created while it is still deploying](./images/picture56.png "Navigate to the Resource Group you created while it is still deploying")
+
+3. Page Down
+![Navigate to the Resource Group you created while it is still deploying](./images/picture57.png "Navigate to the Resource Group you created while it is still deploying")
+
+You will see that some tasks have yet to finish
+![Navigate to the Resource Group you created while it is still deploying](./images/picture58.png "Navigate to the Resource Group you created while it is still deploying")
+
+4. When your deployment shows 'Succeeded', you are ready to begin
+![Navigate to the Resource Group you created while it is still deploying](./images/picture59.png "Navigate to the Resource Group you created while it is still deploying")
+
+
 ## Step 2
 ### Login to Primary Server, download and install Tableau Primary Networked Server
 
